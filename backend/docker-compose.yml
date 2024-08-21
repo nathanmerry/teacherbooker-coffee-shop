@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  app_db:
+    image: postgres:15
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
+    restart: always
+    ports:
+      - 5431:5432
+    environment:
+      POSTGRES_USER: coffee
+      POSTGRES_PASSWORD: coffee
+      POSTGRES_DB: coffee_db
+
