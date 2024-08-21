@@ -12,7 +12,7 @@ Given my experience with DigitalOcean and Google Cloud:
 ### For a Larger-Scale App (e.g., Multiple Coffee Shops with High Traffic)
 AWS also provides services for building scalable and robust web applications. While I don't have direct experience with AWS, I would possibly use the following services:
 
-- **AWS Amplify**: To host and manage the frontend, especially if it's a React or static site, AWS Amplify offers a streamlined process with built-in CI/CD capabilities.
+- **AWS Amplify**: To host and manage the frontend, especially if it's a React or static site.
   
 - **AWS Elastic Beanstalk or AWS Lambda**: For the backend, AWS Elastic Beanstalk could be used for deploying and scaling web applications easily. If the architecture leans towards microservices or serverless functions, AWS Lambda might be a suitable choice.
 
