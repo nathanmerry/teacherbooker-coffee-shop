@@ -19,7 +19,7 @@ test('coffees should load from the database with the correct names and prices', 
   prices.forEach(price => expect(loadedPrices).toContain(price));
 });
 
-test('you should be able to customise coffees and place the order', async ({ page }) => {
+test('you should be able to customise coffees and place the order', async ({ page, request }) => {
   await page.goto('http://localhost:5174');
 
   const coffeeItems = page.locator('.coffee-item');
@@ -105,6 +105,21 @@ test('you should be able to customise coffees and place the order', async ({ pag
     price: 40,
     createdAt: expect.any(String),
     updatedAt: expect.any(String)
+  }));
+
+  const orderId = postResponseBody.id;
+
+  const response = await request.get('http://localhost:3132/orders');
+  expect(response.status()).toBe(200);
+  
+  const orders = await response.json();
+  const order = orders.find((order: any) => order.id === orderId);
+  
+  expect(order).toBeDefined();  // Ensure the order exists
+  expect(order).toEqual(expect.objectContaining({
+    id: orderId,
+    name: 'some name',
+    price: 40
   }));
 });
 
