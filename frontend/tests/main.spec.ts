@@ -46,14 +46,14 @@ test('you should be able to customise coffees and place the order', async ({ pag
   page.on('request', async request => {
     if (request.url() === 'http://localhost:3132/orders' && request.method() === 'POST') {
       postRequestMade = true;
-      postRequestPayload = request.postDataJSON(); // Get the request payload
+      postRequestPayload = request.postDataJSON();
     }
   });
 
   page.on('response', async response => {
     if (response.url() === 'http://localhost:3132/orders' && response.request().method() === 'POST') {
-      postResponseStatus = response.status(); // Get the response status code
-      postResponseBody = await response.json(); // Get the response body as JSON
+      postResponseStatus = response.status();
+      postResponseBody = await response.json();
     }
   });
 
@@ -84,7 +84,6 @@ test('you should be able to customise coffees and place the order', async ({ pag
     ])
   }));
 
-  // Check that the post response body contains expected structure
   expect(postResponseBody).toEqual(expect.objectContaining({
     id: expect.any(String),
     name: 'some name',
@@ -115,7 +114,7 @@ test('you should be able to customise coffees and place the order', async ({ pag
   const orders = await response.json();
   const order = orders.find((order: any) => order.id === orderId);
   
-  expect(order).toBeDefined();  // Ensure the order exists
+  expect(order).toBeDefined();
   expect(order).toEqual(expect.objectContaining({
     id: orderId,
     name: 'some name',
