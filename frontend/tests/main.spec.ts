@@ -33,8 +33,6 @@ test('you should be able to customise coffees and place the order', async ({ pag
   await page.locator('input.p-inputnumber-input').first().fill('10');
   await page.locator('input.p-inputnumber-input').nth(1).fill('10');
 
-  await page.screenshot({ path: 'basket-preview.png', fullPage: true });
-
   await page.click('.add-to-basket');
   await page.locator('input.name-field').first().fill('some name');
 
@@ -45,7 +43,6 @@ test('you should be able to customise coffees and place the order', async ({ pag
   let postResponseStatus: number | null = null;
   let postResponseBody: any = null;
 
-  // Listen for network requests
   page.on('request', async request => {
     if (request.url() === 'http://localhost:3132/orders' && request.method() === 'POST') {
       postRequestMade = true;
@@ -53,7 +50,6 @@ test('you should be able to customise coffees and place the order', async ({ pag
     }
   });
 
-  // Listen for network responses
   page.on('response', async response => {
     if (response.url() === 'http://localhost:3132/orders' && response.request().method() === 'POST') {
       postResponseStatus = response.status(); // Get the response status code
