@@ -10,6 +10,7 @@ import ordersRoutes from './orders';
 const app = express();
 const prisma = new PrismaClient();
 
+// set to env var
 app.use(cors({ origin: 'http://localhost:5174' }));
 app.use(express.json());
 
