@@ -10,7 +10,7 @@ Given my experience with DigitalOcean and Google Cloud:
 - **Google Cloud**: Alternatively, for slightly larger setups, I might use Google Cloud's App Engine for the backend and Cloud Storage for the frontend.
 
 ### For a Larger-Scale App (e.g., Multiple Coffee Shops with High Traffic)
-AWS also provides services for building scalable and robust web applications. While I don't have direct experience with AWS, I would explore using the following services:
+AWS also provides services for building scalable and robust web applications. While I don't have direct experience with AWS, I would possibly use the following services:
 
 - **AWS Amplify**: To host and manage the frontend, especially if it's a React or static site, AWS Amplify offers a streamlined process with built-in CI/CD capabilities.
   
