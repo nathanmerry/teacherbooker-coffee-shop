@@ -1,36 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Button } from 'primereact/button';
-import { Toast } from 'primereact/toast';
-import api from './api';
-
-import CoffeeItem from './components/coffee-item';
 import Shop from './components/shop';
-
 import heroImage from './assets/images/hero.png';
-
-type Ingredients = {
-  milk: number;
-  sugar: number;
-  cream: number;
-  caramel: number;
-};
-
-type Coffee = {
-  key: string;
-  name: string;
-  ingredients?: Ingredients;
-  price: number;
-};
-
-type BasketItem = Coffee & { quantity: number };
-
-const orders = [
-  { key: "latter", name: 'Latte' },
-  { key: "macchiato", name: 'Macchiato' },
-  { key: "macchiato2", name: 'Macchiato' },
-  { key: "americano", name: 'Americano' },
-  { key: "cappuccino", name: 'Cappuccino' },
-];
 
 const App = () => {
   return (
