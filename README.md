@@ -7,7 +7,7 @@ Given my experience with DigitalOcean and Google Cloud:
 
 - **DigitalOcean**: I find DigitalOcean very user-friendly and cost-effective for smaller projects. I would likely use DigitalOcean to host both the frontend and backend. Both the front and back end could be hosted on the App Platform. For the database, I would use a digital ocean managed PostgreSQL database.
 
-- **Google Cloud**: Alternatively, for slightly larger setups, I might use Google Cloud's App Engine for the backend and Cloud Storage for the frontend. Google Cloud's managed services provide strong support for scaling if the application grows over time.
+- **Google Cloud**: Alternatively, for slightly larger setups, I might use Google Cloud's App Engine for the backend and Cloud Storage for the frontend.
 
 ### For a Larger-Scale App (e.g., Multiple Coffee Shops with High Traffic)
 If the application were to scale and require more robust infrastructure, AWS also provides services for building scailable web applications. While I don't have direct experience with AWS, I would explore using the following services:
