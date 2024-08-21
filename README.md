@@ -17,6 +17,3 @@ AWS also provides services for building scalable and robust web applications. Wh
 - **AWS Elastic Beanstalk or AWS Lambda**: For the backend, AWS Elastic Beanstalk could be used for deploying and scaling web applications easily. If the architecture leans towards microservices or serverless functions, AWS Lambda might be a suitable choice.
 
 - **Amazon RDS (PostgreSQL)**: For the database, Amazon RDS would be ideal for managing a PostgreSQL database with automated backups, patching, and scaling.
-
-### Conclusion
-While I am most comfortable with DigitalOcean and Google Cloud, which I have used in previous projects, I understand that AWS is a powerful option for larger-scale applications.
