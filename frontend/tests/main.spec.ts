@@ -120,5 +120,7 @@ test('you should be able to customise coffees and place the order', async ({ pag
     name: 'some name',
     price: 40
   }));
+
+  // could also test by fetching the backend and checking if the order is there
 });
 
